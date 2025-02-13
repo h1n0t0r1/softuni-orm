@@ -1,12 +1,10 @@
-pip install <package_name>          	# Install a package
-pip uninstall <package_name>        	# Uninstall a package
+pip install <package_name>          	  # Install a package
+pip uninstall <package_name>        	  #  Uninstall a package
 pip install --upgrade <package_name>  	# Upgrade a package
-pip list                            	# List all installed packages
-pip show <package_name>             	# Show details of a package
-
-pip freeze								# Display installed packages in a format compatible for requirements.txt
-pip freeze > requirements.txt       	# Save installed packages to a file
-pip install -r requirements.txt     	# Install packages from a file
-
-pip list --outdated                 	# List outdated packages
+pip list                            	  # List all installed packages
+pip show <package_name>             	  # Show details of a package
+pip freeze								              # Display installed packages in a format compatible for requirements.txt
+pip freeze > requirements.txt       	  # Save installed packages to a file
+pip install -r requirements.txt     	  # Install packages from a file
+pip list --outdated                   	# List outdated packages
 pip install --upgrade <package_name>  	# Upgrade a specific package
