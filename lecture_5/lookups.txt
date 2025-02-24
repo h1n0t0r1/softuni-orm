@@ -1,0 +1,33 @@
+field__exact -> exact match (WHERE field=value)
+field__iexact -> case insensitive matchh (WHERE field ILIKE value)
+field__contains -> contains case sensitive match (WHERE field like %value%)
+field__icontains -> contains case insensitive match (WHERE field ilike %value%)
+field__in=[val_1, val_2, val_3...] -> iterable set (WHERE value IN (val_1, val_2, val_3, ...)) 
+field__gt -> greater than
+field__gte -> greater than or equal
+field__lt -> less than
+field__lte -> less than or equal
+field__startswith=value -> starts with value (WHERE field LIKE 'value%')
+field__istartswith=value -> case insensitive starts with (WHERE field ILIKE 'value%')
+field__endswith=value -> ends with value (WHERE value like "%value")
+field__iendswith=value -> case insensitive ends with (WHERE value ILIKE "%value")
+field__range=(start, end) -> field in range (WHERE field between start and end)
+field__date = datetime.date(value) -> exact date  always cast value to datetie.date
+field__date__gt = datetime.date(value)   --> can be combined with __gt, __gte, __lt ....
+field__year = value -> exact year match (WHERE value BETWEEN 'year-01-01' AND 'year-12-31')
+field__month = value -> exact month match (WHERE EXTRACT('month' FROM field) = 'value')
+field__month__gte = value -> exact month match (WHERE EXTRACT('month' FROM field) >= 'value')
+field__day = value -> same as month and year
+field__week = value -> same as day, month
+field__weekday = value -> weekday match 2=monday, 7=saturday
+field__isoweekday = value -> weekday match 1=monday, 6=saturday
+field__quater = value -> quater of the year, can be 1, 2, 3 or 4
+field__time=datetime.time(value) -> check for exact time
+field__time__range=(datetime.time(start), datetime.time(end)) -> check for time range
+field__hour = value check for exact time hour
+field__hour__gte = value
+field__minute -> same as hour
+field__second
+field__isnull = True -> check if field is null
+field__regex=r"regex_here" -> check for a regex in a field
+field__iregex=r"regex_here" -> check for a case isensitive regex in a field
